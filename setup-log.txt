@@ -311,3 +311,75 @@ All installed packages are compatible
 ERROR: No encontré un README.md en la raíz de tu proyecto.
 13:03:41 QUÉ HACER: Escribe tu README.md (qué hallazgo encontraron, para quién es y cómo verlo) en la carpeta del proyecto y vuelve a correr --entregar. Los jueces lo leen primero.
 13:03:41 FIN con código de salida 1
+
+===== setup 2026-11-20 13:04:03 =====
+13:04:03 Sistema detectado: windows x64  |  Python del arranque: 3.12.12
+13:04:03 MODO: entregar  |  versión del script: 2026-11-16  |  argumentos: --entregar
+13:04:03 SISTEMA: Windows-11-10.0.26300-SP0  |  detectado: windows x64  |  versión: 10.0.26300
+13:04:03 WINDOWS: build 26300  |  administrador: False
+13:04:03 PYTHON: 3.12.12 (C:\Users\sbern\Downloads\plantilla-hackathon\ATHENA\.venv\Scripts\python.exe)
+13:04:03 USUARIO: sbern  |  carpeta actual: C:\Users\sbern\Downloads\plantilla-hackathon\ATHENA
+13:04:03 PROYECTO: C:\Users\sbern\Downloads\plantilla-hackathon\ATHENA  |  largo de ruta: 51  |  espacios: False  |  no ASCII: False
+13:04:03 DISCO LIBRE: 198.6 GB
+13:04:03 PROXY: ninguno
+13:04:03 Proyecto: C:\Users\sbern\Downloads\plantilla-hackathon\ATHENA
+13:04:03 
+Preparando la entrega...
+13:04:03 
+[1/7] Validando el entorno
+13:04:03 $ C:\Users\sbern\Downloads\plantilla-hackathon\ATHENA\.hackathon\.tools\uv\uv.exe pip check --python C:\Users\sbern\Downloads\plantilla-hackathon\ATHENA\.venv\Scripts\python.exe
+13:04:04 Checked 57 packages in 3ms
+All installed packages are compatible
+13:04:04 $ C:\Users\sbern\Downloads\plantilla-hackathon\ATHENA\.venv\Scripts\python.exe -c import pandas, numpy, fastapi, uvicorn, pydantic, strands, boto3, httpx
+13:04:05 
+13:04:05   Pieza              Esperado                            Encontrado      Estado
+13:04:05   -----------------  ----------------------------------  --------------  ------
+13:04:05   uv                 0.11.19                             0.11.19         OK    
+13:04:05   Python (.venv)     3.12.12                             3.12.12         OK    
+13:04:05   Node               v22.23.1                            v22.23.1        OK    
+13:04:05   npm                10.x                                10.9.8          OK    
+13:04:05   Paquetes Python    9 fijos                             9 coinciden     OK    
+13:04:05   Paquetes npm       12 fijos                            12 coinciden    OK    
+13:04:05   pip check          sin conflictos                      sin conflictos  OK    
+13:04:05   Importar paquetes  pandas, fastapi, pydantic, strands  importan        OK    
+13:04:05 
+[2/7] Revisando el README y el stack
+13:04:05     AVISO: README.md no tiene ninguna imagen; los jueces piden un visual bien formateado
+13:04:05 $ C:\Users\sbern\Downloads\plantilla-hackathon\ATHENA\.venv\Scripts\python.exe -c import backend.main as m;assert hasattr(m,'app'), 'APP';assert any(getattr(r,'path','')=='/health' for r in m.app.routes), 'HEALTH'
+13:04:06 
+13:04:06     El proyecto sigue el stack del evento
+13:04:06     Rutas del dashboard OK (ninguna empieza con '/')
+13:04:06 
+[3/7] Compilando el dashboard (vite build)
+13:04:06 $ C:\Users\sbern\Downloads\plantilla-hackathon\ATHENA\.hackathon\.tools\node\node.exe C:\Users\sbern\Downloads\plantilla-hackathon\ATHENA\dashboard\node_modules\vite\bin\vite.js build
+13:04:08 [36mvite v5.4.21 [32mbuilding for production...[36m[39m
+transforming...
+[32mâœ“[39m 55 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                 [39m[1m[2m  0.41 kB[22m[1m[22m[2m â”‚ gzip:  0.28 kB[22m
+[2mdist/[22m[35massets/index-QehyjpsO.css  [39m[1m[2m 20.05 kB[22m[1m[22m[2m â”‚ gzip:  4.66 kB[22m
+[2mdist/[22m[36massets/index-Bl8mWiOa.js   [39m[1m[2m240.13 kB[22m[1m[22m[2m â”‚ gzip: 66.81 kB[22m
+[32mâœ“ built in 1.56s[39m
+13:04:08     Dashboard compilado en dashboard/dist
+13:04:08 $ C:\Users\sbern\Downloads\plantilla-hackathon\ATHENA\.hackathon\.tools\node\node.exe C:\Users\sbern\Downloads\plantilla-hackathon\ATHENA\dashboard\node_modules\typescript\bin\tsc --noEmit -p C:\Users\sbern\Downloads\plantilla-hackathon\ATHENA\dashboard
+13:04:10 
+13:04:10 
+[4/7] Comprobando el backend (sintaxis e importación)
+13:04:10 $ C:\Users\sbern\Downloads\plantilla-hackathon\ATHENA\.venv\Scripts\python.exe -m compileall -q backend
+13:04:10 
+13:04:10 $ C:\Users\sbern\Downloads\plantilla-hackathon\ATHENA\.venv\Scripts\python.exe -c import backend.main
+13:04:11 
+13:04:11     Backend OK (backend.main se importa sin errores)
+13:04:11 
+[5/7] Buscando llaves y credenciales en tus archivos
+13:04:11     Sin credenciales a la vista
+13:04:11 
+[6/7] Empaquetando
+13:04:49 
+[7/7] Verificando el .zip
+13:04:53     176 archivos, 171.1 MB
+13:04:53 
+LISTO. Sube este archivo:
+  C:\Users\sbern\Downloads\plantilla-hackathon\entrega-ATHENA-20261120-1304.zip
+13:04:53 FIN con código de salida 0
