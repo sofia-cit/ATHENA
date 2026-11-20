@@ -7,6 +7,9 @@ node_modules/
 dist/
 __pycache__/
 
+# Datos generados (no versionar, se regeneran con data_pipeline.py)
+data/clean/
+
 # Llaves y credenciales: nunca al repositorio
 .env
 .env.*
