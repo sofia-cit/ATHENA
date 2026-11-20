@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <g stroke="#D6C59A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- penachos -->
+    <path d="M13 12 L9.5 6 L16 9.5" />
+    <path d="M35 12 L38.5 6 L32 9.5" />
+    <!-- cuerpo -->
+    <path d="M10 20 C10 12 15 9 24 9 C33 9 38 12 38 20 V29 C38 37 32 42 24 42 C16 42 10 37 10 29 Z" />
+    <!-- ojos -->
+    <circle cx="18.5" cy="21" r="4.6" />
+    <circle cx="29.5" cy="21" r="4.6" />
+    <!-- pico -->
+    <path d="M24 25.4 L21.6 29 H26.4 Z" fill="#D6C59A" />
+    <!-- linea del pecho -->
+    <path d="M14.5 31 C18 33 20 33.4 24 33.4 C28 33.4 30 33 33.5 31" opacity="0.55" />
+  </g>
+  <!-- pupilas -->
+  <circle cx="18.5" cy="21" r="1.8" fill="#D6C59A" />
+  <circle cx="29.5" cy="21" r="1.8" fill="#D6C59A" />
+</svg>

@@ -1,15 +1,24 @@
-import { Bar, BarChart, XAxis, YAxis } from 'recharts'
-
-const datos = [{ nombre: 'Ejemplo A', valor: 3 }, { nombre: 'Ejemplo B', valor: 5 }]
+import { useState } from 'react'
+import type { Vista } from './types'
+import { TeamProvider } from './context/TeamContext'
+import Header from './components/Header'
+import EquipoView from './views/EquipoView'
+import AnalistaCoachView from './views/AnalistaCoachView'
+import CuadroSituacionalView from './views/CuadroSituacionalView'
 
 export default function App() {
+  const [vista, setVista] = useState<Vista>('equipo')
+
   return (
-    <main className="p-6">
-      <h1 className="text-2xl font-bold">Hackathon NFL UNAM</h1>
-      <p className="text-gray-600">Plantilla lista. Reemplaza esta pantalla con tu proyecto.</p>
-      <BarChart width={320} height={200} data={datos}>
-        <XAxis dataKey="nombre" /><YAxis /><Bar dataKey="valor" fill="#2F7D4F" />
-      </BarChart>
-    </main>
+    <TeamProvider>
+      <div className="min-h-screen bg-obsidiana text-tinta">
+        <Header vista={vista} onVista={setVista} />
+        <main>
+          {vista === 'equipo' && <EquipoView onIrAnalista={() => setVista('analista')} />}
+          {vista === 'analista' && <AnalistaCoachView onVista={setVista} />}
+          {vista === 'cuadro' && <CuadroSituacionalView onVista={setVista} />}
+        </main>
+      </div>
+    </TeamProvider>
   )
 }
